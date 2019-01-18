@@ -1,0 +1,8 @@
+# LLamada de roles 
+
+- name: Monitor Zabbix
+  hosts: all	
+  user: cchacoff
+
+  roles:
+   - test
