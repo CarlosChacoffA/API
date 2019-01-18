@@ -1,0 +1,24 @@
+---
+
+# Instalar Zabbix Agent
+
+- name: Crear directorio Instalacion
+  file: path=/home/instalacion state=directory
+
+- name: Descargar repositorio Zabbix
+  shell: cd /home/instalacion/; wget {{ urlzabbix }}
+  
+- name: Instalar repositorio Zabbix
+  shell: cd /home/instalacion/; dpkg -i zabbix-release_3.4-1+jessie_all.deb
+
+- name: Actualizar cache apt
+  apt: update_cache=yes force=yes
+
+- name: Instalar Zabbix Agent
+  apt: name={{ zabbix_package }} state=present
+
+- name: Copiar Config Zabbix
+  template: src=zabbix_agentd.conf.j2 dest=/etc/zabbix/zabbix_agentd.conf backup=yes
+
+- name: Reiniciar Zabbix Agent
+  service: name=zabbix-agent state=restarted

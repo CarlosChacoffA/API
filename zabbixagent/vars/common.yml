@@ -1,0 +1,5 @@
+---
+
+urlzabbix: http://repo.zabbix.com/zabbix/3.4/debian/pool/main/z/zabbix-release/zabbix-release_3.4-1+jessie_all.deb
+zabbix_package: zabbix-agent
+zabbixserver: opszabbix.neogistica.com

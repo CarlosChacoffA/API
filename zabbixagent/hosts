@@ -1,0 +1,4 @@
+# Servidor
+
+tesladev ansible_ssh_host=tesladev.neogistica.com
+
