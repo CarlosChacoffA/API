@@ -1,4 +1,6 @@
-# Servidor
+[dev]
+thor ansible_host=192.168.100.211 
+loki ansible_host=192.168.100.212                                         
+odin ansible_host=192.168.100.213
 
-tesladev ansible_ssh_host=tesladev.neogistica.com
 
