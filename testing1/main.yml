@@ -1,0 +1,8 @@
+# LLamada de roles 
+
+- name: Ejecutar api zabbix
+  hosts: all	
+  user: cchacoff
+
+  roles:
+   - test

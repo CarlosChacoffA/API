@@ -1,0 +1,8 @@
+#Ejecutar script zabbix.py
+ - name: execute install script
+   script: /var/lib/awx/projects/myplatform/testing1/scripts/request_zabbix.py/
+   args:
+     executable: python3
+
+
+
