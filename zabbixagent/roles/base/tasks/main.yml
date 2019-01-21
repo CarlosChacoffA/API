@@ -10,6 +10,7 @@
   
 - name: Instalar repositorio Zabbix
   shell: cd /home/instalacion/; dpkg -i zabbix-release_3.4-1+jessie_all.deb
+  become: true
 
 - name: Actualizar cache apt
   apt: update_cache=yes force=yes
